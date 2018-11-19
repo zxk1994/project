@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td>公告名称</td>
+        <td>公告日期</td>
+
+    </tr>
+    {% if rs%}
+    {%for item in rs%}
+    <tr>
+        <td><a href="/detail/{{item.ggId}}">{{item.title}}</a></td>
+        <td>{{item.times}}</td>
+
+
+    </tr>
+    {%endfor%}
+    {%endif%}
+</table>
+</body>
+</html>
